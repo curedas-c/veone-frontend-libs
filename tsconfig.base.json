@@ -14,7 +14,9 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@veone-frontend-libs/ngx-veone": ["packages/ngx-veone/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
