@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { TimeElapsedPipe } from './pipes/time/timeElapsed.pipe';
+import { TimeElapsedPipe } from '../pipes/time/timeElapsed.pipe';
 
 const DECLARATIONS = [TimeElapsedPipe];
 
