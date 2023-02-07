@@ -6,15 +6,17 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
+  title: 'Ngx Veone Docs',
+  tagline: 'Awesome CDK',
+  url: 'https://curedas-c.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'curedas-c', // Usually your GitHub org/user name.
+  projectName: 'veone-frontend-libs', // Usually your repo name.
+  deploymentBranch: 'develop',
+  trailingSlash: false,
 
   presets: [
     [
