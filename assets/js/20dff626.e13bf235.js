@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[9675],{8177:s=>{s.exports=JSON.parse('{"label":"docusaurus","permalink":"/veone-frontend-libs/blog/tags/docusaurus","allTagsPath":"/veone-frontend-libs/blog/tags","count":4}')}}]);
