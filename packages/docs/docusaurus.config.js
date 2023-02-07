@@ -9,13 +9,13 @@ const config = {
   title: 'Ngx Veone Docs',
   tagline: 'Awesome CDK',
   url: 'https://curedas-c.github.io',
-  baseUrl: '/',
+  baseUrl: '/veone-frontend-libs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'curedas-c', // Usually your GitHub org/user name.
   projectName: 'veone-frontend-libs', // Usually your repo name.
-  deploymentBranch: 'develop',
+  deploymentBranch: 'docs',
   trailingSlash: false,
 
   presets: [
