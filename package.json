@@ -4,8 +4,8 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "build:ngx": "nx build ngx-veone",
-    "test:ngx": "nx test ngx-veone --watch",
+    "ngx:build": "nx build ngx-veone",
+    "ngx:test": "nx test ngx-veone --watch",
     "docs:serve": "nx serve docs",
     "docs:deploy": "nx run docs:deploy",
     "commit": "cz"

@@ -13,8 +13,8 @@ const config = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'VEONE',
-  projectName: 'veone-frontend-libs', // Usually your repo name.
+  organizationName: 'curedas-c',
+  projectName: 'veone-frontend-libs',
   deploymentBranch: 'docs',
   trailingSlash: false,
 

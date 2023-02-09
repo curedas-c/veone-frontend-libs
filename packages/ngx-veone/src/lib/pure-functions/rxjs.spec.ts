@@ -14,6 +14,8 @@ describe('ofDelay', () => {
       expect(endTime - startTime).toBeGreaterThanOrEqual(2500);
       done();
     });
+    
+    jest.advanceTimersByTime(4000);
   });
 
   it('should emit after specified delay', done => {
@@ -28,5 +30,7 @@ describe('ofDelay', () => {
       expect(endTime - startTime).toBeGreaterThanOrEqual(delay);
       done();
     });
+    
+    jest.advanceTimersByTime(6000);
   });
 });
