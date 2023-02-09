@@ -1,0 +1,20 @@
+---
+sidebar_position: 1
+---
+
+Des fonctions pour gérer ou génerer des nombres.
+
+### randomInteger
+
+Génère un nombre entier aléatoire compris dans l'interval passé en paramêtres.
+
+```ts title="./user.service.mock.ts"
+import { randomInteger } from 'ngx-veone';
+
+@Injectable()
+export class DummyService {
+  generateArticleReadCount() {
+    return randomInteger(100, 500);
+  }
+}
+```
