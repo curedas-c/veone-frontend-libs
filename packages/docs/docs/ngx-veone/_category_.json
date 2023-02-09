@@ -1,0 +1,8 @@
+{
+  "label": "NGX-VEONE",
+  "position": 3,
+  "link": {
+    "type": "generated-index",
+    "description": "Le CDK ANGULAR de VEONE."
+  }
+}
