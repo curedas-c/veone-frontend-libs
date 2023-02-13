@@ -4,6 +4,28 @@ sidebar_position: 1
 
 Des pipes pour formater ou créer des dates.
 
+### Installation
+
+Importez le module `VeoneTimePipeModule`.
+
+```ts
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { VeoneTimePipeModule } from 'ngx-veone';
+
+const MODULES = [ReactiveFormsModule, VeoneTimePipeModule];
+
+@NgModule({
+  imports: [CommonModule, ...MODULES],
+  exports: [...MODULES]
+})
+export class SharedModule {}
+
+```
+
+
 ### timeElapsed
 
 Renvoie le temps écoulé depuis une date passée en paramêtres.

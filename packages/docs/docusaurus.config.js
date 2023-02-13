@@ -7,12 +7,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'VEONE FRONTEND LIBS',
-  tagline: 'Le CDK Open Source signé VEONE',
+  tagline: 'La doc des bibliothèques Open Source signées VEONE',
   url: 'https://curedas-c.github.io',
   baseUrl: '/veone-frontend-libs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'curedas-c',
   projectName: 'veone-frontend-libs',
   deploymentBranch: 'docs',

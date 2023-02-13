@@ -6,7 +6,7 @@ sidebar_position: 2
 
 - Les souscriptions doivent en prorité être faites via le pipe `async`, au travers d'un objet `state`.
 
-``` HTML title="terminals-wrapper.component.ts"
+``` html title="terminals-wrapper.component.ts"
 
 <section *ngIf="{
     violations: violations$ | async,
@@ -21,7 +21,7 @@ sidebar_position: 2
 - Le code CSS doit respecter les spécifications [BEM](https://getbem.com/naming/), peux importe le framework CSS utilisé.
 - Le code CSS des composants doit toujours être encapsulé dans un sélecteur `:host`, en veillant à utiliser des sélecteurs SASS.
 
-``` SCSS
+``` scss title="terminals-wrapper.component.scss"
 :host {
   .terminals-wrapper {
     &__list {
@@ -38,7 +38,7 @@ sidebar_position: 2
 
 - Le contenu des composants doit toujours être **encapsulé**, c-a-d avoir un élément qui englobe tout son contenu.
 
-``` HTML title="terminals-wrapper.component.ts"
+``` html title="terminals-wrapper.component.html"
 <section class="terminals-wrapper">
   <!-- CONTENU ICI -->
 </section>
@@ -49,14 +49,14 @@ sidebar_position: 2
 
 Exemple de mauvais code:
 
-``` HTML
+``` html
 <div class="row">
   <div class="item">
   </div>
 </div>
 ```
 
-``` HTML
+``` html
 <article class="magazine">
   <article class="magazine__header">
   </article>
@@ -68,14 +68,14 @@ Exemple de mauvais code:
 
 - Ce qu'on préfère:
 
-``` HTML
+``` html
 <section class="row">
   <div class="item">
   </div>
 </section>
 ```
 
-``` HTML
+``` html
 <article class="magazine">
   <header class="magazine__header">
   </header>

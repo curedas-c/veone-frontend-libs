@@ -19,7 +19,7 @@ Quelques exemples:
 
 - camelCase pour les variables --> `aNewVariable` et fonctions `addNewElement()`
 - PascalCase pour les Services --> `AuthService`, classes --> `Authenticator` et composants `AuthComponent`.
-- KebabCase pour les attributs HTML --> `<a id='home-link' class='home-link'>Home</a>`
+- KebabCase pour les attributs html --> `<a id='home-link' class='home-link'>Home</a>`
 - Upper Case Snake Case pour les constantes globales i.e `AUTHENTICATION_TYPES`
 
 Quelques Références:

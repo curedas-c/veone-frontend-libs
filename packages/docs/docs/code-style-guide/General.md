@@ -31,19 +31,24 @@ La maîtrise de ses outils est donc primordiale.
 
 Tailwind CSS, SASS(SCSS) et BEM sont utilisés principalement pour écrire les styles CSS.
 
-Il est recommandé de séparer Structure HTML, de styles CSS autant que possible.
+Il est recommandé de séparer Structure html, de styles CSS autant que possible.
 Les règles tailwind doivent être appliqués via `@apply` et non pas directement dans l'attribut `class`.
 
 - Exemple de mauvais code:
 
-``` HTML
+``` html
 <div class="example container-fluid px-4 text-black">
 </div>
 ```
 
 - Ce qu'on préfère:
 
-``` SCSS
+``` html
+<div class="example">
+</div>
+```
+
+``` scss
 .example {
     @apply px-4 text-black w-full;
 }
