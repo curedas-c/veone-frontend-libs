@@ -7,12 +7,12 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'VEONE FRONTEND LIBS',
-  tagline: 'Le CDK Open Source signé VEONE',
+  tagline: 'La doc des bibliothèques Open Source signées VEONE',
   url: 'https://curedas-c.github.io',
   baseUrl: '/veone-frontend-libs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'curedas-c',
   projectName: 'veone-frontend-libs',
   deploymentBranch: 'docs',
@@ -26,13 +26,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/edit/main/website/'
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/main/website/blog/'
+          editUrl: 'https://github.com/curedas-c'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
@@ -57,7 +51,6 @@ const config = {
             position: 'left',
             label: 'Documentation'
           },
-          // { to: '/blog', label: 'Blog', position: 'left' },
           {
             href: 'https://github.com/curedas-c',
             label: 'GitHub',
@@ -68,15 +61,6 @@ const config = {
       footer: {
         style: 'dark',
         // links: [
-        //   {
-        //     title: 'Docs',
-        //     items: [
-        //       {
-        //         label: 'Tutorial',
-        //         to: '/docs/intro'
-        //       }
-        //     ]
-        //   },
         //   {
         //     title: 'Community',
         //     items: [
@@ -91,19 +75,6 @@ const config = {
         //       {
         //         label: 'Twitter',
         //         href: 'https://twitter.com/docusaurus'
-        //       }
-        //     ]
-        //   },
-        //   {
-        //     title: 'More',
-        //     items: [
-        //       {
-        //         label: 'Blog',
-        //         to: '/blog'
-        //       },
-        //       {
-        //         label: 'GitHub',
-        //         href: 'https://github.com/facebook/docusaurus'
         //       }
         //     ]
         //   }

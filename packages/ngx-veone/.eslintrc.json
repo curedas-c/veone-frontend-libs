@@ -9,7 +9,7 @@
           "error",
           {
             "type": "attribute",
-            "prefix": "veoneFrontendLibs",
+            "prefix": "ngx-v",
             "style": "camelCase"
           }
         ],
@@ -17,7 +17,7 @@
           "error",
           {
             "type": "element",
-            "prefix": "veone-frontend-libs",
+            "prefix": "ngx-v",
             "style": "kebab-case"
           }
         ]
