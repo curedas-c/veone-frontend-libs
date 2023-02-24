@@ -1,5 +1,5 @@
 ---
-sidebar_position: 3
+sidebar_position: 5
 ---
 
 Nous utilisons des librairies tels que `NgRx` et `NgXs` pour la gestion d'états.
