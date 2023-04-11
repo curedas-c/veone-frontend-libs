@@ -1,7 +1,10 @@
-# ngx-veone
+# NGX-VEONE
 
-This library was generated with [Nx](https://nx.dev).
 
-## Running unit tests
+✨ **Authors [Curédas Codjo.], [VEONE TEAM.]** ✨
 
-Run `nx test ngx-veone` to execute the unit tests.
+**NGX VEONE** is a CDK to facilitate developments on ANGULAR 2+.
+
+## Documentation
+
+A documentation can be found at: <https://curedas-c.github.io/veone-frontend-libs/docs/category/ngx-veone/>.

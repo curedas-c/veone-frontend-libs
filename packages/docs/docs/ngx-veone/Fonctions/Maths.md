@@ -8,7 +8,7 @@ Des fonctions pour gérer ou génerer des nombres.
 
 Génère un nombre entier aléatoire compris dans l'interval passé en paramêtres.
 
-```ts title="./user.service.mock.ts"
+```ts title="./dummy.service.ts"
 import { randomInteger } from 'ngx-veone';
 
 @Injectable()

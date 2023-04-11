@@ -30,3 +30,43 @@ export class UserMockService extends UserService {
   }
 }
 ```
+
+### retryWhenOnline
+
+Une version modifiée de l'opérateur `retry`,
+qui prend en compte le status actuel du réseau via `navigator.onLine`.
+
+Dans l'exemple ci-dessous, la requête sera rééssayée 2 fois toutes les 3 secondes.
+
+L'opérateur attandra le retour de la connexion, dans le cas oû `navigator.onLine === false` au moment de la souscription. 
+
+Le paramêtre `delayObservable$` permet d'attendre l'émission de l'observable fournit, avant la resouscription.
+
+```ts title="./banana.component.ts"
+import { retryWhenOnline } from 'ngx-veone';
+ 
+@Component({
+  selector: 'banana',
+  templateUrl: './banana.component.html',
+  styleUrls: ['./banana.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
+})
+export class BananaComponent {
+  constructor(private http: HttpClient) {}
+
+  getLatestBananas() {
+    return this.http
+    .get('example.com')
+    .pipe(
+      retryWhenOnline({
+        count: 2,
+        delay: 3000,
+      }),
+      tap({
+        next: res => console.log(res)
+      })
+    )
+    .subscribe();
+  }
+}
+```
