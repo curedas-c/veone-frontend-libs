@@ -1,7 +1,16 @@
-import { delay, of } from "rxjs";
+import {
+  delay,
+  filter,
+  fromEvent,
+  mergeMap,
+  Observable,
+  of,
+  OperatorFunction,
+  retry
+} from 'rxjs';
 /**
  * A combination of `delay` and `of` rxjs Operators.
- * 
+ *
  * Suitable for unit test when you want to return a value after a certain time.
  *
  * ## Example
@@ -22,3 +31,53 @@ import { delay, of } from "rxjs";
  */
 export const ofDelay = <T>(data: T, millisecondsDelay = 2500) =>
   of<T>(data).pipe(delay(millisecondsDelay));
+
+/**
+ * A modified `retry` operator that
+ * handle network connection loss/recovery via `navigator.onLine`
+ * 
+ * ## Example
+ *
+ * Retry 2 times each 3000ms.
+ * 
+ * If device is offline at subscription time, 
+ * it will wait to be online before relaunch subscription
+ *
+ * ```ts
+ * import { retryWhenOnline } from 'ngx-veone';
+ *
+ * const fetchData = dummyService.fetchBananas();
+ * fetchData.pipe(retryWhenOnline({ count: 2, delay: 3000 }))
+ * .subscribe(x => console.log(x));
+ * ```
+ *
+ * @param {({
+ *   count: number | undefined;
+ *   delay: number | undefined;
+ *   delayObservable$?: Observable<boolean | undefined>;
+ * })} [options]
+ * @return {*}  {OperatorFunction<T, T>}
+ */
+export function retryWhenOnline<T>(options?: {
+  count: number | undefined;
+  delay: number | undefined;
+  resetOnSuccess: boolean | undefined;
+  delayObservable$?: Observable<boolean | undefined>;
+}): OperatorFunction<T, T> {
+  const { count, delay:retryDelay, delayObservable$, resetOnSuccess } = options || {};
+  return source$ =>
+    source$.pipe(
+      retry({
+        count,
+        delay: error => {
+          const error$ = delayObservable$ ? delayObservable$.pipe(filter(Boolean), mergeMap(() => error)) : of(error);
+          const isDeviceOffline = navigator.onLine === false;
+          if (isDeviceOffline) {
+            return fromEvent(window, 'online').pipe(mergeMap(() => error$));
+          }
+          return error$.pipe(delay(retryDelay ?? 5000));
+        },
+        resetOnSuccess
+      })
+    );
+}
