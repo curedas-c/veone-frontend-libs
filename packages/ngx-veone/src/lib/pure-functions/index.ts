@@ -1,5 +1,8 @@
 // RXJS utils
-export { ofDelay } from './rxjs';
+export * from './rxjs';
+
+// Objects utils
+export * from './objects';
 
 // Math utils
-export { randomInteger } from './math';
+export * from './math';
