@@ -1,6 +1,6 @@
 {
   "name": "ngx-veone",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "publishConfig": {
     "access": "public"
   },
@@ -8,16 +8,16 @@
     "name": "Veone"
   },
   "peerDependencies": {
-    "@angular/animations": "~15.0.0",
-    "@angular/common": "~15.0.0",
-    "@angular/compiler": "~15.0.0",
-    "@angular/core": "~15.0.0",
-    "@angular/forms": "~15.0.0",
-    "@angular/platform-browser": "~15.0.0",
-    "@angular/platform-browser-dynamic": "~15.0.0",
-    "@angular/router": "~15.0.0",
+    "@angular/animations": ">=15.0.0",
+    "@angular/common": ">=15.0.0",
+    "@angular/compiler": ">=15.0.0",
+    "@angular/core": ">=15.0.0",
+    "@angular/forms": ">=15.0.0",
+    "@angular/platform-browser": ">=15.0.0",
+    "@angular/platform-browser-dynamic": ">=15.0.0",
+    "@angular/router": ">=15.0.0",
     "dayjs": "^1.11.6",
-    "rxjs": "~7.5.0"
+    "rxjs": ">=7.5.0"
   },
   "dependencies": {
     "tslib": "^2.3.0"
