@@ -7,7 +7,7 @@
     "ngx:build": "nx build ngx-veone",
     "ngx:test": "nx test ngx-veone",
     "ngx:test--watch": "nx test ngx-veone --watch",
-    "ngx:publish": "npm run ngx:build && cd packages/ngx-veone && npm publish",
+    "ngx:publish": "npm run ngx:build && cd dist/packages/ngx-veone && npm publish",
     "docs:serve": "nx serve docs",
     "docs:deploy": "nx run docs:deploy",
     "commit": "cz"
